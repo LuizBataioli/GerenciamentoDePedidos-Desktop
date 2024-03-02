@@ -1,4 +1,5 @@
-OrderDesk
+Projeto: OrderDesk
+Participantes: Luiz Bataioli, Marcelo Steinhaus, Felype Echer.
 
 Problema: 
 
