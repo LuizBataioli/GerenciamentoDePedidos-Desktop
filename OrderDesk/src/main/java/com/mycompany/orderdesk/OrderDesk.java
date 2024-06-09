@@ -6,7 +6,7 @@ package com.mycompany.orderdesk;
 
 /**
  *
- * @author felyp
+ * @author Luiz Bataioli
  */
 public class OrderDesk {
 
