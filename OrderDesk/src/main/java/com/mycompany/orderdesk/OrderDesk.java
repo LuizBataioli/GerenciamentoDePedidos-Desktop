@@ -4,6 +4,8 @@
 
 package com.mycompany.orderdesk;
 
+import view.TelaInicial;
+
 /**
  *
  * @author Luiz Bataioli
@@ -11,6 +13,9 @@ package com.mycompany.orderdesk;
 public class OrderDesk {
 
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        
+        TelaInicial telaPrincipal = new TelaInicial();
+        telaPrincipal.setVisible(true);
+        
     }
 }
