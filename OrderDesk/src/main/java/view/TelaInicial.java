@@ -31,7 +31,8 @@ public class TelaInicial extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
+        jMenuCadastro = new javax.swing.JMenu();
+        jMenuItemProduto = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -52,8 +53,22 @@ public class TelaInicial extends javax.swing.JFrame {
         jMenu2.setText("Cozinha");
         jMenuBar1.add(jMenu2);
 
-        jMenu3.setText("Cadastro");
-        jMenuBar1.add(jMenu3);
+        jMenuCadastro.setText("Cadastro");
+        jMenuCadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuCadastroActionPerformed(evt);
+            }
+        });
+
+        jMenuItemProduto.setText("Produtos");
+        jMenuItemProduto.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItemProdutoActionPerformed(evt);
+            }
+        });
+        jMenuCadastro.add(jMenuItemProduto);
+
+        jMenuBar1.add(jMenuCadastro);
 
         setJMenuBar(jMenuBar1);
 
@@ -71,6 +86,16 @@ public class TelaInicial extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenuItemProdutoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItemProdutoActionPerformed
+        TelaCadastro Cadastro = new TelaCadastro();
+        jDesktopPane1.add(Cadastro);
+        Cadastro.setVisible(true);
+    }//GEN-LAST:event_jMenuItemProdutoActionPerformed
+
+    private void jMenuCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuCadastroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMenuCadastroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -111,7 +136,8 @@ public class TelaInicial extends javax.swing.JFrame {
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenu jMenuCadastro;
+    private javax.swing.JMenuItem jMenuItemProduto;
     // End of variables declaration//GEN-END:variables
 }
