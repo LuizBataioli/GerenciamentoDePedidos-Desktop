@@ -30,7 +30,8 @@ public class TelaInicial extends javax.swing.JFrame {
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        JMCozinha = new javax.swing.JMenu();
+        JMTelaCozinha = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -49,8 +50,22 @@ public class TelaInicial extends javax.swing.JFrame {
         jMenu1.setText("Balcão");
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Cozinha");
-        jMenuBar1.add(jMenu2);
+        JMCozinha.setText("Cozinha");
+        JMCozinha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JMCozinhaActionPerformed(evt);
+            }
+        });
+
+        JMTelaCozinha.setText("Tela Cozinha");
+        JMTelaCozinha.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                JMTelaCozinhaActionPerformed(evt);
+            }
+        });
+        JMCozinha.add(JMTelaCozinha);
+
+        jMenuBar1.add(JMCozinha);
 
         jMenu3.setText("Cadastro");
         jMenuBar1.add(jMenu3);
@@ -71,6 +86,16 @@ public class TelaInicial extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void JMCozinhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMCozinhaActionPerformed
+        
+    }//GEN-LAST:event_JMCozinhaActionPerformed
+
+    private void JMTelaCozinhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_JMTelaCozinhaActionPerformed
+        TelaCozinha cozinha = new TelaCozinha();
+        jDesktopPane1.add(cozinha);
+        cozinha.setVisible(true);
+    }//GEN-LAST:event_JMTelaCozinhaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -108,9 +133,10 @@ public class TelaInicial extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JMenu JMCozinha;
+    private javax.swing.JMenuItem JMTelaCozinha;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     // End of variables declaration//GEN-END:variables
